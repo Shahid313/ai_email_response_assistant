@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Email Responder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Email Responder</h1>
+        
+        <textarea id="emailInput" placeholder="Paste your email here..."></textarea>
+        
+        <select id="toneSelect">
+            <option value="Formal">Formal</option>
+            <option value="Informal">Informal</option>
+            <option value="Polite">Polite</option>
+            <option value="Friendly">Friendly</option>
+            <option value="Professional">Professional</option>
+        </select>
+        
+        <div class="action-row">
+            <button onclick="generateResponse()">Generate Response</button>
+        </div>
+        
+        <div id="responseContainer">
+            <h3>AI Response:</h3>
+            <div id="responseBox"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
