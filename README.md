@@ -13,3 +13,13 @@ This project is an AI-powered email assistant that generates context-aware, tone
       Robust error handling for API failures or malformed responses.
 ✨ **Configurable:** 
       Easy model/API changes via .env and config.py.
+
+ A[User Input: Email + Desired Tone] --> B[Build Prompt]
+    B --> C[API Request to OpenRouter]
+    C --> D{Success?}
+    D -->|Yes| E[Parse Response]
+    D -->|No| F[Handle Error]
+    E --> G[Extract AI-Generated Email]
+    F --> H[Return Error Message]
+    G --> I[Output: Polished Email]
+    H --> I
